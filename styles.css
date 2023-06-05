@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(218, 23%, 16%);
+}
+
+.container{
+    width: 500px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: hsl(217, 19%, 24%);
+    position: relative;
+}
+
+h1{
+    margin-bottom: 1rem;
+    color: hsl(150, 100%, 66%);
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#advice-text{
+    margin-bottom: 2rem;
+    text-align: center;
+    color: hsl(193, 38%, 86%);
+    font-size: 28px;
+}
+
+#advice-text::before{
+    content: "❝ ";
+}
+
+#advice-text::after{
+    content: " ❞";
+}
+
+.divider{
+    margin-bottom: 2rem;
+}
+
+.dice{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: hsl(150, 100%, 66%);
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px;
+    transition: all .2s ease-out;
+}
+
+.dice:hover{
+    filter: drop-shadow(0 0 0.75rem hsl(150, 100%, 66%));
+}
+
+.dice:active{
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .7);
+}
+
+footer{
+    margin-top: 3rem;
+}
+
+.attribution{
+    color: hsl(193, 38%, 86%);
+}
+
+.attribution a{
+    color: hsl(150, 100%, 66%);
+}
+
+.attribution a:hover{
+    color: hsl(150, 48%, 51%);
+}
+
+
+/*------for small screen------*/
+
+@media screen and (max-width: 600px){
+    .container{
+        width: 320px;
+        padding: 20px;
+    }
+
+    .divider{
+        width: 100%;
+    }
+
+    .divider img{
+        width: 100%;
+    }
+
+    .attribution{
+        font-size: 10px;
+    }
+}
